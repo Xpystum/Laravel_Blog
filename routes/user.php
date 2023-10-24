@@ -4,9 +4,11 @@ use App\Http\Controllers\User\PostController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::controller(PostController::class)->prefix('user')->group(function(){
+Route::middleware(['auth', 'IsActiveUser'])->controller(PostController::class)->prefix('user')->group(function(){
 
     // CRUD (create, read, update, delete)
+    Route::redirect('/', '/user/posts')->name('user');
+
     Route::get('/posts', 'index')->name('user.posts');
 
     Route::get('/posts/create', 'create')->name('user.posts.create');

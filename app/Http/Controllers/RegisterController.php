@@ -8,10 +8,10 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
     public function index(){
-        return "index";
+        return view('register.index');
     }
 
     public function store(){
-        return "store";
+        return "store Регистрация";
     }
 }
