@@ -23,9 +23,10 @@ Route::middleware('guest')->group(function (){
 });
 
 
-Route::view('/', 'home.index')->name('home');
-
-Route::redirect('/home', '/')->name('home.redirect');
+Route::controller(PostController::class)->group(function(){
+    Route::view('/', 'home.index')->name('home');
+    Route::redirect('/home', '/')->name('home.redirect');
+});
 
 
 

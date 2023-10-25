@@ -1,46 +1,23 @@
-<header class="py-3 border-bottom"> 
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container">
-        <div class="d-flex justify-content-between">
+
+        <a href=" {{route('home')}} " class="navbar-brand" >
+            {{config('app.name')}}
+        </a>    
+
+        <button type="button" class="navbar-toggler"  data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
         
-            <div>
-                <ul class="list-unstyled d-flex ">
+        <div class="collapse navbar-collapse" id="navbar-collapse">
+            <ul class="navbar-nav">
 
-                    <li class="me-3">
-                        <a href=" {{route('home')}} ">
-                            Главная
-                        </a>
-                    </li>
-
-                    <li class="me-3">
-                        <a href=" {{route('blog')}} ">
-                           Блог
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
-
-            <div>
-                <ul class="list-unstyled d-flex ">
-
-
-                    <li class="ms-3">
-                        <a href=" {{route('register')}} ">
-                            Регистрация
-                        </a>
-                    </li>
-
-                    <li class="ms-3">
-                        <a href=" {{route('login')}} ">
-                            Вход
-                        </a>
-                    </li>
-                    
-                </ul>
-            </div>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active" aria-current="page" >Главная</a>
+                </li>
     
-    
-    
-        </div>
+            </ul>
+      </div>
+      
     </div>
-</header>
+  </nav>
